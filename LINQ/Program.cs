@@ -1,10 +1,12 @@
-﻿namespace LINQ
+﻿
+ 
+var gameNames = new List<string>() { "Diablo", "TFT", "LOL", "Runeterra" };
+
+var order  = gameNames.OrderBy(gameNames=> gameNames.Length).ToList();
+
+foreach (var name in order)
 {
-    public class Program
-    {
-        static void Main(string[] args)
-        {
-            Console.WriteLine("Hello, World!");
-        }
-    }
+    Console.WriteLine(name);
 }
+
+
